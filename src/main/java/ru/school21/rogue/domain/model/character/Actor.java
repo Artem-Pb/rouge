@@ -5,14 +5,12 @@ import ru.school21.rogue.domain.model.common.Position;
 
 public abstract class Actor implements Damageable {
     private int health, agility, strength;
-    //private Weapon weapon;
     private Position position;
 
-    protected Actor(int health, int agility, int strength /*, Weapon weapon*/, Position position) {
+    protected Actor(int health, int agility, int strength, Position position) {
         this.health = health;
         this.agility = agility;
         this.strength = strength;
-        //this.weapon = weapon;
         this.position = position;
     }
 
@@ -39,11 +37,6 @@ public abstract class Actor implements Damageable {
         return strength;
     }
 
-//    public Weapon getWeapon() {
-//        return weapon;
-//    }
-
-
     public Position getPosition() {
         return position;
     }
@@ -51,11 +44,6 @@ public abstract class Actor implements Damageable {
     public void setHealth(int health) {
         this.health = Math.max(0, health);
     }
-
-//    public void setWeapon(Weapon weapon) {
-//        this.weapon = weapon;
-//    }
-
 
     public void setPosition(Position position) {
         this.position = position;

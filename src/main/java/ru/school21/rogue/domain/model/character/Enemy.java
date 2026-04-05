@@ -1,6 +1,7 @@
 package ru.school21.rogue.domain.model.character;
 
 import ru.school21.rogue.domain.model.common.Position;
+
 public sealed class Enemy extends Actor permits Zombie, Vampire, Ogr, Ghost, SnakeMage {
     private final EnemyType type;
     private final int hostility;
@@ -14,11 +15,6 @@ public sealed class Enemy extends Actor permits Zombie, Vampire, Ogr, Ghost, Sna
     @Override
     public int attack() {
         return 0;
-    }
-
-    @Override
-    public void takeDamage(int damage) {
-
     }
 
     public EnemyType getType() {
